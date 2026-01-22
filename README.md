@@ -20,6 +20,33 @@ El proyecto está dirigido principalmente a los judíos de la comunidad judía d
 - Salomon Achar Saad Mograbi
 - Albert Harari Samra
 
+## Tecnologías
+- **Frontend**: React Admin
+- **Backend**: Node.js/Express (API REST)
+- **Base de datos**: MongoDB/PostgreSQL
+- **Autenticación**: JWT
+- **Hosting**: Vercel/Netlify
+
+## Características principales
+- 📋 Panel de administración para gestionar servicios sociales
+- 👥 Sistema de registro y autenticación de usuarios
+- 📅 Calendario de actividades y eventos
+- 📊 Dashboard con estadísticas de participación
+- 📱 Diseño responsive (móvil y desktop)
+- 🔐 Sistema de permisos y roles
+
+## Instalación y desarrollo
+```bash
+# Clonar el repositorio
+git clone https://github.com/aquiba-benarroch/Servicio_Social.git
+
+# Instalar dependencias
+npm install
+
+# Ejecutar en modo desarrollo
+npm start
+```
+
 ## Diseño y organización
 El proyecto se desarrollará con enfoque en la usabilidad, accesibilidad y diseño moderno, asegurando que la experiencia del usuario sea intuitiva y agradable. Se priorizará la organización semántica de la información y la facilidad para encontrar oportunidades de servicio social.
 
