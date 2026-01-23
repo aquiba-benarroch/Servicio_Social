@@ -13,7 +13,8 @@ const {
 const { authMiddleware, authorize } = require('../middleware/auth.middleware');
 const { apiLimiter, writeLimiter } = require('../middleware/rate-limit.middleware');
 
-// All routes require authentication
+// All routes require authentication and rate limiting
+router.use(apiLimiter);
 router.use(authMiddleware);
 
 // Get all users (Admin only)
