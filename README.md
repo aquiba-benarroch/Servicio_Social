@@ -36,15 +36,101 @@ El proyecto está dirigido principalmente a los judíos de la comunidad judía d
 - 🔐 Sistema de permisos y roles
 
 ## Instalación y desarrollo
-```bash
-# Clonar el repositorio
-git clone https://github.com/aquiba-benarroch/Servicio_Social.git
 
-# Instalar dependencias
+### Requisitos Previos
+- Node.js v16 o superior
+- MongoDB v4.4 o superior (local o MongoDB Atlas)
+- Git
+
+### Instalación Completa
+
+1. Clonar el repositorio
+```bash
+git clone https://github.com/aquiba-benarroch/Servicio_Social.git
+cd Servicio_Social
+```
+
+2. Instalar dependencias de backend y frontend
+```bash
+# Instalar dependencias del backend
+cd backend
 npm install
 
-# Ejecutar en modo desarrollo
+# Instalar dependencias del frontend
+cd ../frontend
+npm install
+```
+
+3. Configurar variables de entorno
+
+**Backend** - Crear `backend/.env`:
+```bash
+cd ../backend
+cp .env.example .env
+# Editar .env con tus configuraciones
+```
+
+**Frontend** - Crear `frontend/.env`:
+```bash
+cd ../frontend
+cp .env.example .env
+# Editar .env con tus configuraciones
+```
+
+4. Asegurarse que MongoDB está corriendo
+```bash
+# Si tienes MongoDB instalado localmente:
+mongod
+
+# O usar MongoDB Atlas (cloud) configurando MONGODB_URI en backend/.env
+```
+
+5. Iniciar el proyecto
+
+**Terminal 1 - Backend**:
+```bash
+cd backend
+npm run dev
+# El backend correrá en http://localhost:3001
+```
+
+**Terminal 2 - Frontend**:
+```bash
+cd frontend
 npm start
+# El frontend correrá en http://localhost:3000
+```
+
+### Acceso Inicial
+
+Al iniciar el backend por primera vez, se creará automáticamente un usuario super admin. Las credenciales se configuran en `backend/.env`:
+
+- Email: `DEFAULT_ADMIN_EMAIL` (default: admin@leyajad.com)
+- Contraseña: `DEFAULT_ADMIN_PASSWORD` (default: ChangeThisPassword123!)
+
+⚠️ **IMPORTANTE**: Cambiar estas credenciales inmediatamente después del primer inicio de sesión.
+
+### Scripts Disponibles
+
+**Desde la raíz del proyecto**:
+```bash
+npm run install:all      # Instalar todas las dependencias
+npm run dev:backend      # Iniciar backend en modo desarrollo
+npm run dev:frontend     # Iniciar frontend en modo desarrollo
+```
+
+**Backend** (`cd backend`):
+```bash
+npm run dev              # Desarrollo con auto-reload
+npm start                # Producción
+npm test                 # Ejecutar tests
+```
+
+**Frontend** (`cd frontend`):
+```bash
+npm start                # Desarrollo
+npm run build            # Build para producción
+npm test                 # Ejecutar tests
 ```
 
 ## Diseño y organización
