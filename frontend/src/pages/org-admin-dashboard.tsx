@@ -193,6 +193,7 @@ export default function OrgAdminDashboard({ onNavigate }: OrgAdminDashboardProps
   };
 
   const handleDeleteOpportunity = (oppId: string) => {
+    // eslint-disable-next-line no-restricted-globals
     if (confirm('¿Estás seguro de que deseas eliminar esta oportunidad?')) {
       deleteOpportunity(oppId);
       toast.success('Oportunidad eliminada');

@@ -14,8 +14,7 @@ interface LoginPageProps {
 }
 
 export default function LoginPage({ onNavigate }: LoginPageProps) {
-  const { login, validatePassword } = useAuth();
-  const { getUserByEmail, addUser } = useData();
+  const { login } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState<'super_admin' | 'org_admin' | 'volunteer'>('volunteer');

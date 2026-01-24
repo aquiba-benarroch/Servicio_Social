@@ -46,7 +46,6 @@ export default function ManageOrganization({ organizationId, onNavigate }: Manag
     signups
   } = useData();
 
-  const [showPasswordDialog, setShowPasswordDialog] = useState(false);
   const [showAddAdminDialog, setShowAddAdminDialog] = useState(false);
   const [showEditOppDialog, setShowEditOppDialog] = useState(false);
   const [selectedUser, setSelectedUser] = useState<User | null>(null);
@@ -171,6 +170,7 @@ export default function ManageOrganization({ organizationId, onNavigate }: Manag
   };
 
   const handleDeleteOpportunity = (oppId: string) => {
+    // eslint-disable-next-line no-restricted-globals
     if (confirm('¿Estás seguro de que quieres eliminar esta oportunidad? Esta acción no se puede deshacer.')) {
       deleteOpportunity(oppId);
       toast.success('Oportunidad eliminada');

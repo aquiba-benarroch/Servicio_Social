@@ -3,7 +3,7 @@
 // ========================================
 
 import { useState, useEffect, useCallback } from 'react';
-import { usersAPI, organizationsAPI, opportunitiesAPI, signupsAPI } from '@/lib/api';
+import { usersAPI, organizationsAPI, opportunitiesAPI } from '@/lib/api';
 import { Organization, Opportunity, Signup, User } from '@/lib/types';
 
 export function useData() {
