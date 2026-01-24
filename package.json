@@ -1,0 +1,29 @@
+{
+  "name": "servicio-social",
+  "version": "1.0.0",
+  "description": "Plataforma de servicios sociales para la comunidad judía de México",
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm start",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm start",
+    "build:frontend": "cd frontend && npm run build",
+    "test": "cd frontend && npm test",
+    "lint": "cd frontend && npm run lint"
+  },
+  "keywords": [
+    "servicio-social",
+    "voluntariado",
+    "comunidad"
+  ],
+  "author": "Equipo Servicio Social",
+  "license": "MIT",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "dependencies": {
+    "mongodb": "^7.0.0"
+  }
+}

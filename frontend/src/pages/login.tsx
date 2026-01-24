@@ -14,8 +14,7 @@ interface LoginPageProps {
 }
 
 export default function LoginPage({ onNavigate }: LoginPageProps) {
-  const { login, validatePassword } = useAuth();
-  const { getUserByEmail, addUser } = useData();
+  const { login } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState<'super_admin' | 'org_admin' | 'volunteer'>('volunteer');
@@ -217,13 +216,6 @@ export default function LoginPage({ onNavigate }: LoginPageProps) {
                       <SignIn className="mr-2" size={20} />
                       {loading ? 'Iniciando sesión...' : 'Iniciar Sesión'}
                     </Button>
-                    <div className="pt-2 border-t">
-                      <p className="text-xs text-muted-foreground text-center">
-                        Credenciales por defecto:<br />
-                        Correo: admin@leyajad.com<br />
-                        Contraseña: admin123
-                      </p>
-                    </div>
                   </form>
                 </CardContent>
               </Card>

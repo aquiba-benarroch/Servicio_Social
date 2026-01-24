@@ -4,7 +4,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { authAPI } from '@/lib/api';
-import { User, AuthSession } from '@/lib/types';
+import { AuthSession } from '@/lib/types';
 
 export function useAuth() {
   const [session, setSession] = useState<AuthSession | null>(null);
